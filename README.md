@@ -24,11 +24,17 @@ Matplotlib: Data visualization
 - Model evaluation: I assessed performance using accuracy, precision, and recall metrics.
 
 ### Project Description
+
 I utilized a dataset containing historical US stock market data and stock-picking concept weights from a weighted scoring stock selection model to predict stocks' annual returns.
 
 Visualizing the data in pair plots allowed me to see the relationship between the concepts. The diagonal plots were histograms of each feature. The most notable observation was the scarcity of negative annual results. This prompted me to fine-tune each model to successfully predict instances of the minority class (negative annual results).
 
+![Screen Shot 2023-03-28 at 1 24 41 PM](https://user-images.githubusercontent.com/119711479/228333578-81031976-d88e-47b0-a92e-c67ba026b3f5.png)
+
 Each model input (X1-X6) represented weights of Large B/P, Large ROE, Large S/P, Large Return Rate in the last quarter, Large Market Value, and Small Systematic Risk concepts. The output was a binary label indicating positive or negative annual return based on a 0.0 threshold. Higher weights implied stronger emphasis on the corresponding concept. Each model learned the relationship between stock-picking concept weights (X1-X6) and the binary label to make predictions. Once trained, each model predicted annual returns based on concept weights.
+
+![Screen Shot 2023-03-28 at 1 23 13 PM](https://user-images.githubusercontent.com/119711479/228333905-53230cc8-ff5c-41b8-87f3-01f1db1c86ec.png)
+![Screen Shot 2023-03-28 at 1 24 00 PM](https://user-images.githubusercontent.com/119711479/228333930-1a3dd474-15d6-4acc-9045-af47ef8eca4b.png)
 
 ### Model Performance
 I present the accuracy, precision, recall, and f1-score for each model:
