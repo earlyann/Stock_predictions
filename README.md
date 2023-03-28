@@ -18,34 +18,34 @@ Imbalanced-learn: Balanced Random Forest and Easy Ensemble model training and ev
 Matplotlib: Data visualization
 
 ### Methods:
-Data collection and preprocessing: I obtained and preprocessed a dataset from the UCI Machine Learning Repository.
-Feature engineering: I created SVM model inputs from the dataset, representing stock-picking concept weights.
-Model training: I trained the SVM, Balanced Random Forest, and Easy Ensemble models using scikit-learn and imbalanced-learn libraries.
-Model evaluation: I assessed performance using accuracy, precision, and recall metrics.
-Project Description
+- Data collection and preprocessing: I obtained and preprocessed a dataset from the UCI Machine Learning Repository.
+- Feature engineering: I created SVM model inputs from the dataset, representing stock-picking concept weights.
+- Model training: I trained the SVM, Balanced Random Forest, and Easy Ensemble models using scikit-learn and imbalanced-learn libraries.
+- Model evaluation: I assessed performance using accuracy, precision, and recall metrics.
+
+### Project Description
 I utilized a dataset containing historical US stock market data and stock-picking concept weights from a weighted scoring stock selection model to predict stocks' annual returns.
 
 Visualizing the data in pair plots allowed me to see the relationship between the concepts. The diagonal plots were histograms of each feature. The most notable observation was the scarcity of negative annual results. This prompted me to fine-tune each model to successfully predict instances of the minority class (negative annual results).
 
 Each model input (X1-X6) represented weights of Large B/P, Large ROE, Large S/P, Large Return Rate in the last quarter, Large Market Value, and Small Systematic Risk concepts. The output was a binary label indicating positive or negative annual return based on a 0.0 threshold. Higher weights implied stronger emphasis on the corresponding concept. Each model learned the relationship between stock-picking concept weights (X1-X6) and the binary label to make predictions. Once trained, each model predicted annual returns based on concept weights.
 
-Model Performance
+### Model Performance
 I present the accuracy, precision, recall, and f1-score for each model:
 
-Support Vector Machine (SVM):
-
+#### Support Vector Machine (SVM):
 Accuracy: 1.0
 Precision: 1.00
 Recall: 1.00
 F1-score: 1.00
-Balanced Random Forest (BRF):
 
+#### Balanced Random Forest (BRF):
 Accuracy: 1.0
 Precision: 1.00
 Recall: 1.00
 F1-score: 1.00
-Easy Ensemble (EE):
 
+#### Easy Ensemble (EE):
 Accuracy: 1.0
 Precision: 1.00
 Recall: 1.00
