@@ -1,14 +1,14 @@
-## Stock Predictions: Enhancing Investment Strategies
+## Stock Predictions: Enhancing Investment Strategies through Model Comparisons
 
 ### Project Overview
-I sought to elevate my investments by developing a project that predicted annual stock returns using and comparing a Support Vector Machine (SVM) model, a Balanced Random Forest Model, and an Easy Ensemble model based on stock-picking concept weights. My aim was to refine traditional models and tailor weighting combinations to cater to diverse investor preferences.
+In this project, I delved into the world of stock predictions by comparing and evaluating the effectiveness of three distinct machine learning models - Support Vector Machine (SVM), Balanced Random Forest (BRF), and Easy Ensemble (EE) - based on stock-picking concept weights. My primary aim was to refine traditional models and tailor weighting combinations to identify the best fit for different investment scenarios.
 
 ### Models
-Support Vector Machine (SVM) model: This supervised machine learning algorithm classifies stocks based on their potential for positive or negative annual returns. The algorithm identifies the optimal hyperplane that separates data points for these two categories.
+Support Vector Machine (SVM) model: This supervised machine learning algorithm specializes in classifying stocks based on their potential for positive or negative annual returns. The algorithm identifies the optimal hyperplane that separates data points into two categories, creating a decision boundary.
 
-Balanced Random Forest Model: A variant of the Random Forest model, this model balances class weights to handle imbalanced datasets more effectively.
+Balanced Random Forest Model: A variation of the conventional Random Forest model, BRF balances class weights, allowing it to handle imbalanced datasets more effectively and produce more reliable predictions.
 
-Easy Ensemble model: This ensemble learning method combines multiple base classifiers to improve prediction performance. It focuses on resampling the dataset to balance class distribution.
+Easy Ensemble model: This ensemble learning method combines multiple base classifiers to improve prediction performance. It focuses on resampling the dataset to balance class distribution, which enhances overall model accuracy.
 
 ### Technologies:
 Python
@@ -18,22 +18,21 @@ Imbalanced-learn: Balanced Random Forest and Easy Ensemble model training and ev
 Matplotlib: Data visualization
 
 ### Methods:
-- Data collection and preprocessing: I obtained and preprocessed a dataset from the UCI Machine Learning Repository.
-- Feature engineering: I created SVM model inputs from the dataset, representing stock-picking concept weights.
-- Model training: I trained the SVM, Balanced Random Forest, and Easy Ensemble models using scikit-learn and imbalanced-learn libraries.
-- Model evaluation: I assessed performance using accuracy, precision, and recall metrics.
+- Data collection and preprocessing: I obtained and preprocessed a dataset from the UCI Machine Learning Repository, ensuring data quality and usability.
+- Feature engineering: I transformed the dataset into SVM model inputs by extracting stock-picking concept weights.
+- Model training: Utilizing the scikit-learn and imbalanced-learn libraries, I trained the SVM, Balanced Random Forest, and Easy Ensemble models.
+- Model evaluation: I gauged each model's performance using accuracy, precision, and recall metrics to determine their effectiveness.
 
 ### Project Description
+I leveraged a dataset containing historical US stock market data and stock-picking concept weights derived from a weighted scoring stock selection model to predict stocks' annual returns.
 
-I utilized a dataset containing historical US stock market data and stock-picking concept weights from a weighted scoring stock selection model to predict stocks' annual returns.
-
-Visualizing the data in pair plots allowed me to see the relationship between the concepts. The diagonal plots were histograms of each feature. The most notable observation was the scarcity of negative annual results. This prompted me to fine-tune each model to successfully predict instances of the minority class (negative annual results).
+To visualize the relationships between the various stock-picking concepts, I employed pair plots, which included histograms of each feature along the diagonal. A key observation was the relative scarcity of negative annual results, which prompted me to fine-tune each model to successfully predict instances of the minority class (negative annual results).
 
 ![Screen Shot 2023-03-28 at 1 24 41 PM](https://user-images.githubusercontent.com/119711479/228333578-81031976-d88e-47b0-a92e-c67ba026b3f5.png)
 
-Each model input (X1-X6) represented weights of Large B/P, Large ROE, Large S/P, Large Return Rate in the last quarter, Large Market Value, and Small Systematic Risk concepts. The output was a binary label indicating positive or negative annual return based on a 0.0 threshold. Higher weights implied stronger emphasis on the corresponding concept. Each model learned the relationship between stock-picking concept weights (X1-X6) and the binary label to make predictions. 
+Each model input (X1-X6) represented weights of Large B/P, Large ROE, Large S/P, Large Return Rate in the last quarter, Large Market Value, and Small Systematic Risk concepts. The output was a binary label indicating positive or negative annual return based on a 0.0 threshold. Higher weights implied stronger emphasis on the corresponding concept. Each model was designed to learn the relationship between stock-picking concept weights (X1-X6) and the binary label in order to make predictions.
 
-Once trained, each model predicted annual returns based on concept weights. This shows the training, hypertuning and testing of the SVM model. 
+After training, each model could predict annual returns based on the concept weights. The training, hypertuning, and testing of the SVM model are depicted in the following images.
 
 ![Screen Shot 2023-03-28 at 1 23 13 PM](https://user-images.githubusercontent.com/119711479/228333905-53230cc8-ff5c-41b8-87f3-01f1db1c86ec.png)
 ![Screen Shot 2023-03-28 at 1 24 00 PM](https://user-images.githubusercontent.com/119711479/228333930-1a3dd474-15d6-4acc-9045-af47ef8eca4b.png)
