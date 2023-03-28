@@ -1,23 +1,23 @@
-Stock Predictions: Enhancing Investment Strategies
-Project Overview
+## Stock Predictions: Enhancing Investment Strategies
+
+### Project Overview
 I sought to elevate my investments by developing a project that predicted annual stock returns using and comparing a Support Vector Machine (SVM) model, a Balanced Random Forest Model, and an Easy Ensemble model based on stock-picking concept weights. My aim was to refine traditional models and tailor weighting combinations to cater to diverse investor preferences.
 
-Models
+### Models
 Support Vector Machine (SVM) model: This supervised machine learning algorithm classifies stocks based on their potential for positive or negative annual returns. The algorithm identifies the optimal hyperplane that separates data points for these two categories.
 
 Balanced Random Forest Model: A variant of the Random Forest model, this model balances class weights to handle imbalanced datasets more effectively.
 
 Easy Ensemble model: This ensemble learning method combines multiple base classifiers to improve prediction performance. It focuses on resampling the dataset to balance class distribution.
 
-Technologies
-
+### Technologies:
 Python
 Pandas: Data manipulation
 Scikit-learn: SVM model training and evaluation
 Imbalanced-learn: Balanced Random Forest and Easy Ensemble model training and evaluation
 Matplotlib: Data visualization
-Methods
 
+### Methods:
 Data collection and preprocessing: I obtained and preprocessed a dataset from the UCI Machine Learning Repository.
 Feature engineering: I created SVM model inputs from the dataset, representing stock-picking concept weights.
 Model training: I trained the SVM, Balanced Random Forest, and Easy Ensemble models using scikit-learn and imbalanced-learn libraries.
@@ -51,10 +51,10 @@ Precision: 1.00
 Recall: 1.00
 F1-score: 1.00
 
-Prediction Function
+#### Prediction Function
 I developed a function that takes one of my predefined models (SVM, BRF, or EE) and a set of X1-X6 data and predicts whether that set of data will yield a positive or negative annual result. The model parameter in the function accepts any model that has a predict method, which is true for most machine learning models in scikit-learn and imbalanced-learn. I was able to pass my previously defined models svm_best_model, brf_best_model, or ee_best_model as the first argument to the function, and it used the respective model for making predictions. This made it easy to test and implement different models within my framework and offered flexibility for users to explore other machine learning models that fit their specific needs.
 
-Conclusion
+### Conclusion
 My project successfully demonstrated the application of three machine learning models - Support Vector Machine, Balanced Random Forest, and Easy Ensemble - for predicting positive or negative annual returns based on stock-picking concept weights. Each model showed excellent performance in terms of accuracy, precision, recall, and f1-score, emphasizing the potential for machine learning to enhance investment strategies.
 
 By comparing the strengths of these models, I realized that investors can choose the most suitable approach to guide their investment decisions, optimizing their portfolio based on their preferences and risk tolerance.
