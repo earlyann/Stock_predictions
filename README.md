@@ -31,7 +31,9 @@ Visualizing the data in pair plots allowed me to see the relationship between th
 
 ![Screen Shot 2023-03-28 at 1 24 41 PM](https://user-images.githubusercontent.com/119711479/228333578-81031976-d88e-47b0-a92e-c67ba026b3f5.png)
 
-Each model input (X1-X6) represented weights of Large B/P, Large ROE, Large S/P, Large Return Rate in the last quarter, Large Market Value, and Small Systematic Risk concepts. The output was a binary label indicating positive or negative annual return based on a 0.0 threshold. Higher weights implied stronger emphasis on the corresponding concept. Each model learned the relationship between stock-picking concept weights (X1-X6) and the binary label to make predictions. Once trained, each model predicted annual returns based on concept weights.
+Each model input (X1-X6) represented weights of Large B/P, Large ROE, Large S/P, Large Return Rate in the last quarter, Large Market Value, and Small Systematic Risk concepts. The output was a binary label indicating positive or negative annual return based on a 0.0 threshold. Higher weights implied stronger emphasis on the corresponding concept. Each model learned the relationship between stock-picking concept weights (X1-X6) and the binary label to make predictions. 
+
+Once trained, each model predicted annual returns based on concept weights. This shows the training, hypertuning and testing of the SVM model. 
 
 ![Screen Shot 2023-03-28 at 1 23 13 PM](https://user-images.githubusercontent.com/119711479/228333905-53230cc8-ff5c-41b8-87f3-01f1db1c86ec.png)
 ![Screen Shot 2023-03-28 at 1 24 00 PM](https://user-images.githubusercontent.com/119711479/228333930-1a3dd474-15d6-4acc-9045-af47ef8eca4b.png)
@@ -56,6 +58,8 @@ Accuracy: 1.0
 Precision: 1.00
 Recall: 1.00
 F1-score: 1.00
+
+Each model was able to successfully identify positive and negative annual returns 100% of the time. 
 
 #### Prediction Function
 I developed a function that takes one of my predefined models (SVM, BRF, or EE) and a set of X1-X6 data and predicts whether that set of data will yield a positive or negative annual result. The model parameter in the function accepts any model that has a predict method, which is true for most machine learning models in scikit-learn and imbalanced-learn. I was able to pass my previously defined models svm_best_model, brf_best_model, or ee_best_model as the first argument to the function, and it used the respective model for making predictions. This made it easy to test and implement different models within my framework and offered flexibility for users to explore other machine learning models that fit their specific needs.
