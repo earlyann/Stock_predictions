@@ -1,7 +1,7 @@
 ## Stock Predictions: Enhancing Investment Strategies through Model Comparisons
 
 ### Project Overview
-In this project, I delved into the world of stock predictions by comparing and evaluating the effectiveness of three distinct machine learning models - Support Vector Machine (SVM), Balanced Random Forest (BRF), and Easy Ensemble (EE) - based on stock-picking concept weights. My primary aim was to refine traditional models and tailor weighting combinations to identify the best fit for different investment scenarios.
+In this project, I delved into the world of stock predictions by comparing and evaluating the effectiveness of three distinct machine learning models - Support Vector Machine (SVM), Balanced Random Forest (BRF), and Easy Ensemble (EE) - based on stock-picking concept weights. My primary aim was to refine traditional models and tailor weighting combinations to identify the best fit for different investment scenarios. The dataset is from the US stock market historical database and contains performances of weighted scoring stock portfolios are obtained with mixture design. Source: https://archive.ics.uci.edu/ml/datasets/stock+portfolio+performance
 
 ### Models
 Support Vector Machine (SVM) model: This supervised machine learning algorithm specializes in classifying stocks based on their potential for positive or negative annual returns. The algorithm identifies the optimal hyperplane that separates data points into two categories, creating a decision boundary.
